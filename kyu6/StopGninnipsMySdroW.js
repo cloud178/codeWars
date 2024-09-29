@@ -21,3 +21,12 @@ function spinWords(string){
     }
     return result_arr.join(' ');
 }
+
+// Second way
+function spinWords(string) {
+    return string.split(' ').map(elem => {
+        return (elem.length > 4) ? elem.split('').reverse().join('') : elem;
+    }).join(' ');
+}
+
+console.log(spinWords('Hey fellow warriors'))
